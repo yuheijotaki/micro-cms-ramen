@@ -1,5 +1,6 @@
 
 export default {
+  srcDir: 'src/',
   mode: 'universal',
   /*
   ** Headers of the page
@@ -18,11 +19,12 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#000' },
   /*
   ** Global CSS
   */
   css: [
+    'ress'
   ],
   /*
   ** Plugins to load before mounting the App
@@ -42,6 +44,7 @@ export default {
     '@nuxtjs/axios',
     // Doc: https://github.com/nuxt-community/dotenv-module
     '@nuxtjs/dotenv',
+    '@nuxtjs/style-resources',
   ],
   /*
   ** Axios module configuration
@@ -58,5 +61,11 @@ export default {
     */
     extend (config, ctx) {
     }
+  },
+  styleResources: {
+    scss: [
+      // '@/assets/scss/foundation/_config.scss',
+      // '@/assets/scss/foundation/_mixin.scss'
+    ]
   }
 }
