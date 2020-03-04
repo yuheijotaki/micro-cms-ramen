@@ -70,8 +70,24 @@ export default {
       // '@/assets/scss/foundation/_mixin.scss'
     ]
   },
+  // .env設定
   env: {
     API_KEY,
     API_URL
+  },
+  // Netlifyへ詳細ページの自動デプロイ
+  generate: {
+    interval: 1000,
+    routes() {
+      return Promise.all([
+        axios.get(process.env.API_URL, {
+          headers: { 'X-API-KEY': process.env.API_KEY }
+        })
+      ]).then(res => {
+        return res.data.contents.map(post => {
+          return "/posts/" + post.id;
+        })
+      })
+    }
   }
 }

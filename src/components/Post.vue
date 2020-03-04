@@ -1,7 +1,8 @@
 <template lang="pug">
   li
-    p id: {{ post.id }}
-    p title: {{ post.title }}
+    nuxt-link(:to="`/posts/${post.id}/`")
+      p id: {{ post.id }}
+      p title: {{ post.title }}
 </template>
 
 <script>
