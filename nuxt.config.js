@@ -1,5 +1,9 @@
+// .env設定
 require("dotenv").config();
 const { API_KEY, API_URL } = process.env;
+
+// generate時にaxiosを使って詳細ページを生成
+const axios = require('axios')
 
 export default {
   srcDir: 'src/',
