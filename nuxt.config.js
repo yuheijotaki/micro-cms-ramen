@@ -81,17 +81,19 @@ export default {
   },
   // Netlifyへ詳細ページの自動デプロイ
   generate: {
-    interval: 1000,
     routes() {
-      return Promise.all([
-        axios.get(process.env.API_URL, {
-          headers: { 'X-API-KEY': process.env.API_KEY }
+      const demo = axios
+        .get("https://jtk.microcms.io/api/v1/demo", {
+          headers: { "X-API-KEY": process.env.API_KEY }
         })
-      ]).then(res => {
-        return res.data.contents.map(post => {
-          return "/posts/" + post.id;
-        })
-      })
+        .then(res => {
+          return res.data.contents.map(post => {
+            return "/posts/" + post.id;
+          });
+        });
+      return Promise.all([demo]).then(values => {
+        return values.join().split(",");
+      });
     }
   }
 }
