@@ -5,6 +5,8 @@
     div(
       v-html="post.content"
     )
+    p
+      nuxt-link(to="/") index
 </template>
 
 <script>
@@ -15,7 +17,7 @@ export default {
     const { data } = await axios.get(
       `${process.env.API_URL}/${params.id}`,
       {
-        headers: { "X-API-KEY": process.env.API_KEY }
+        headers: { 'X-API-KEY': process.env.API_KEY }
       }
     )
     return {
