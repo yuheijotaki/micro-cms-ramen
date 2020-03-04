@@ -1,3 +1,5 @@
+require("dotenv").config();
+const { API_KEY, API_URL } = process.env;
 
 export default {
   srcDir: 'src/',
@@ -67,5 +69,9 @@ export default {
       // '@/assets/scss/foundation/_config.scss',
       // '@/assets/scss/foundation/_mixin.scss'
     ]
+  },
+  env: {
+    API_KEY,
+    API_URL
   }
 }

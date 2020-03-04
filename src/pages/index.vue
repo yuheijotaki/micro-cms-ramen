@@ -1,16 +1,17 @@
-<template>
-  <div>
-    <logo />
-    <p>index.vue</p>
-  </div>
+<template lang="pug">
+  div
+    Logo
+    Posts
 </template>
 
 <script>
 import Logo from '~/components/Logo.vue'
+import Posts from '~/components/Posts.vue'
 
 export default {
   components: {
-    Logo
+    Logo,
+    Posts
   }
 }
 </script>
