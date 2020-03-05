@@ -37,3 +37,11 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+</style>
