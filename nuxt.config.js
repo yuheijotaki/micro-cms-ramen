@@ -82,8 +82,8 @@ export default {
   // Netlifyへ詳細ページの自動デプロイ
   generate: {
     routes() {
-      const ramen = axios
-        .get('https://jtk.microcms.io/api/v1/ramen', {
+      const demo = axios
+        .get('https://jtk.microcms.io/api/v1/demo', {
           headers: { 'X-API-KEY': process.env.API_KEY }
         })
         .then(res => {
@@ -91,7 +91,7 @@ export default {
             return '/posts/' + post.id
           })
         })
-      return Promise.all([ramen]).then(values => {
+      return Promise.all([demo]).then(values => {
         return values.join().split(',')
       })
     }
