@@ -8,7 +8,7 @@ https://ramen.yuheijotaki.dev/
 
 ## microCMS
 
-https://cdn-ak.f.st-hatena.com/images/fotolife/j/jotaki/20200305/20200305162138.png
+![microCMS](https://cdn-ak.f.st-hatena.com/images/fotolife/j/jotaki/20200305/20200305162138.png)
 
 
 
